@@ -1,5 +1,6 @@
 import sys
 from data_parser import load_delivery_data
+from heuristic import solve_greedy, print_cli_output
 
 def main():
     # Validasi parameter CLI
@@ -20,10 +21,20 @@ def main():
         sys.exit(1)
 
     fuel_price = project_data["scenarios"][scenario_choice]["fuel_price"]
-    print(f"[INFO] Sukses memuat {len(project_data['locations'])} lokasi.")
-    print(f"[INFO] Harga bensin aktif: Rp {fuel_price}/liter\n")
+    print(f"Sukses memuat {len(project_data['locations'])} lokasi.")
+    print(f"Harga bensin aktif: Rp {fuel_price}/liter")
 
-    print("--- HASIL EKSEKUSI ALGORITMA (Menunggu Implementasi Anggota Lain) ---")
+    # EKSEKUSI HEURISTIK
+    hasil_greedy = solve_greedy(
+        distance_matrix=project_data["matrix"],
+        locations=project_data["locations"],
+        weights=project_data["weights"],
+        fuel_price=fuel_price
+    )
+    
+    # Tampilkan hasil ke terminal layar komputer
+    print_cli_output(hasil_greedy, project_data["locations"])
+
 
 if __name__ == "__main__":
     main()
