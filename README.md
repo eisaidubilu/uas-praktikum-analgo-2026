@@ -41,3 +41,7 @@ Jalankan program utama di Terminal dengan menyertakan argumen skenario pilihan A
  ```bash
    python src/main.py --scenario crisis
 
+### Summary
+Berdasarkan hasil simulasi pada dua kondisi ekonomi, algoritma Greedy memiliki Total Cost of Ownership (TCO) yang lebih rendah dibandingkan algoritma Exact. Hal ini disebabkan karena algoritma Greedy memiliki waktu eksekusi yang sangat cepat sehingga biaya komputasi server yang dihasilkan jauh lebih kecil. Meskipun algoritma Exact mampu menghasilkan rute yang lebih optimal dan sedikit menghemat biaya bahan bakar, penghematan tersebut belum mampu mengimbangi tingginya biaya komputasi yang dibutuhkan.
+Pada skenario Subsidi (Rp5.000/liter) maupun Krisis (Rp20.000/liter), algoritma Greedy tetap menjadi pilihan yang lebih ekonomis untuk digunakan. Berdasarkan analisis Break-Even, algoritma Exact baru mulai menguntungkan ketika harga bensin berada pada kisaran belasan juta Rupiah per liter. 
+Oleh karena itu, keputusan bisnis yang direkomendasikan adalah tetap menggunakan algoritma Greedy pada kondisi operasional normal. Algoritma Exact hanya layak dipertimbangkan apabila terjadi kenaikan harga bahan bakar yang sangat ekstrem atau ketika perusahaan memiliki kebutuhan optimasi rute yang jauh lebih tinggi dibandingkan biaya komputasi yang harus dikeluarkan.
