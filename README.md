@@ -49,14 +49,14 @@ Algoritma eksak yang dipilih adalah Backtracking dengan DFS dan Pruning karena m
 ### Analisis Kompleksitas (Big-O)
 
 1. Algoritma Greedy
-Waktu : O(n²)
-Ruang : O(n)
-Pada setiap lokasi, algoritma mencari tetangga terdekat dengan melakukan penelusuran seluruh simpul yang belum dikunjungi.
+- Waktu : O(n²)
+- Ruang : O(n)
+- Pada setiap lokasi, algoritma mencari tetangga terdekat dengan melakukan penelusuran seluruh simpul yang belum dikunjungi.
 
 2. Algoritma Exact (Backtracking + DFS + Pruning)
-Waktu : O(n!)
-Ruang : O(n)
-Algoritma melakukan eksplorasi seluruh kemungkinan rute secara rekursif. Teknik pruning digunakan untuk memangkas cabang yang tidak mungkin menghasilkan solusi lebih baik, namun kompleksitas terburuknya tetap bersifat faktorial.
+- Waktu : O(n!)
+- Ruang : O(n)
+- Algoritma melakukan eksplorasi seluruh kemungkinan rute secara rekursif. Teknik pruning digunakan untuk memangkas cabang yang tidak mungkin menghasilkan solusi lebih baik, namun kompleksitas terburuknya tetap bersifat faktorial.
 
 ### Summary
 Berdasarkan hasil simulasi pada dua kondisi ekonomi, algoritma Greedy memiliki Total Cost of Ownership (TCO) yang lebih rendah dibandingkan algoritma Exact. Hal ini disebabkan karena algoritma Greedy memiliki waktu eksekusi yang sangat cepat sehingga biaya komputasi server yang dihasilkan jauh lebih kecil. Meskipun algoritma Exact mampu menghasilkan rute yang lebih optimal dan sedikit menghemat biaya bahan bakar, penghematan tersebut belum mampu mengimbangi tingginya biaya komputasi yang dibutuhkan.
