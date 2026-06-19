@@ -40,12 +40,13 @@ Jalankan program utama di Terminal dengan menyertakan argumen skenario pilihan A
 2. **Skenario Cricis (Harga BBM mahal Rp 20.000/liter)**
  ```bash
    python src/main.py --scenario crisis
+   ```
 
-## Pemilihan Algoritma
+### Pemilihan Algoritma
 Algoritma heuristik yang dipilih adalah Greedy (Nearest Neighbor) karena memiliki waktu eksekusi yang sangat cepat dengan kompleksitas yang rendah, sehingga cocok digunakan pada sistem operasional harian yang membutuhkan respons instan.
 Algoritma eksak yang dipilih adalah Backtracking dengan DFS dan Pruning karena mampu menjamin solusi rute paling optimal secara global. Namun, algoritma ini memiliki biaya komputasi yang jauh lebih tinggi sehingga hanya cocok digunakan pada kondisi tertentu.
 
-## Analisis Kompleksitas (Big-O)
+### Analisis Kompleksitas (Big-O)
 
 1. Algoritma Greedy
 Waktu : O(n²)
