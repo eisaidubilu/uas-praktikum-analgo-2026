@@ -3,18 +3,51 @@
     "subsidy": { "fuel_price": 5000 },
     "crisis": { "fuel_price": 20000 }
   },
+
   "locations": [
-    "Hub", 
-    "Pelanggan_1", "Pelanggan_2", "Pelanggan_3", "Pelanggan_4", "Pelanggan_5", 
-    "Pelanggan_6", "Pelanggan_7", "Pelanggan_8", "Pelanggan_9", "Pelanggan_10",
-    "Pelanggan_11", "Pelanggan_12", "Pelanggan_13", "Pelanggan_14", "Pelanggan_15"
+    "Hub Paket Jatinangor",
+
+    "Kos Terpadu Jatinangor",
+    "Kos Nagoya 1",
+    "Bumi Kos",
+    "Kos Griya Nawaloka",
+    "Kos The Hill",
+
+    "Pondok Reni",
+    "Pondok Helvida",
+    "Pondok Mulya",
+    "Pondok Hegar",
+    "Kos Latief",
+
+    "Kos D'Aksara",
+    "Pondok Cikuda Indah",
+    "Pondok Naura",
+    "Pondok Monica",
+    "Kos Lighthouse"
   ],
+
   "packages_weight": {
-    "Hub": 0, 
-    "Pelanggan_1": 2, "Pelanggan_2": 3, "Pelanggan_3": 1, "Pelanggan_4": 5, "Pelanggan_5": 2, 
-    "Pelanggan_6": 4, "Pelanggan_7": 2, "Pelanggan_8": 3, "Pelanggan_9": 1, "Pelanggan_10": 2,
-    "Pelanggan_11": 4, "Pelanggan_12": 1, "Pelanggan_13": 3, "Pelanggan_14": 5, "Pelanggan_15": 2
+    "Hub Paket Jatinangor": 0,
+
+    "Kos Terpadu Jatinangor": 2,
+    "Kos Nagoya 1": 3,
+    "Bumi Kos": 1,
+    "Kos Griya Nawaloka": 5,
+    "Kos The Hill": 2,
+
+    "Pondok Reni": 4,
+    "Pondok Helvida": 2,
+    "Pondok Mulya": 3,
+    "Pondok Hegar": 1,
+    "Kos Latief": 2,
+
+    "Kos D'Aksara": 4,
+    "Pondok Cikuda Indah": 1,
+    "Pondok Naura": 3,
+    "Pondok Monica": 5,
+    "Kos Lighthouse": 2
   },
+
   "distance_matrix": [
     [0, 5, 8, 12, 4, 7, 14, 9, 11, 6, 10, 8, 13, 6, 9, 11],
     [5, 0, 4, 9, 3, 6, 12, 7, 10, 5, 8, 6, 11, 4, 8, 9],

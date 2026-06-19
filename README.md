@@ -48,7 +48,7 @@ Algoritma eksak yang dipilih adalah Backtracking dengan DFS dan Pruning karena m
 
 ### Analisis Kompleksitas (Big-O)
 
-## Algoritma Greedy (Nearest Neighbor)
+#### Algoritma Greedy (Nearest Neighbor)
 
 1. Kompleksitas Waktu: O(n²)
 Algoritma Greedy menggunakan satu perulangan utama untuk mengunjungi seluruh lokasi pelanggan sebanyak n−1 kali. Pada setiap iterasi, algoritma melakukan pencarian tetangga terdekat dengan menelusuri seluruh lokasi yang belum dikunjungi. Dengan demikian, terdapat dua perulangan bersarang yang menghasilkan kompleksitas waktu sebesar:
@@ -57,7 +57,7 @@ O(n × n) = O(n²)
 Algoritma menyimpan beberapa struktur data tambahan, yaitu visited berukuran n, route berukuran n+1. Ada variabel bantu seperti current_node, nearest_node, dan min_distance.
 Karena penggunaan memori bertambah secara linear terhadap jumlah lokasi, maka kompleksitas ruangnya adalah O(n).
 
-## Algoritma Exact (Backtracking + DFS + Pruning)
+#### Algoritma Exact (Backtracking + DFS + Pruning)
 
 1. Kompleksitas Waktu: O(n!)
 Algoritma Exact menggunakan pendekatan rekursif (Depth First Search) untuk mengeksplorasi seluruh kemungkinan rute yang dapat dibentuk. Pada kasus terburuk, seluruh permutasi lokasi harus diperiksa. Jumlah kemungkinan rute yang dievaluasi adalah (n − 1)!. Karena pertumbuhannya bersifat faktorial, kompleksitas waktunya dinyatakan sebagai O(n!). Meskipun teknik pruning digunakan untuk memangkas cabang yang tidak mungkin menghasilkan solusi lebih baik, kompleksitas terburuknya tetap bersifat faktorial.
