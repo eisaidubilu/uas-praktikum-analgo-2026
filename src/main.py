@@ -2,6 +2,7 @@ import sys
 from data_parser import load_delivery_data
 from heuristic import solve_greedy, print_cli_output
 from exact import solve_exact, print_exact_output
+from financial_analysis import calculate_break_even
 
 def main():
     # Validasi parameter CLI
@@ -63,6 +64,42 @@ def main():
     print(f"Heuristik: Rp {hasil_greedy['tco']:,.2f}")
     print(f"Eksak    : Rp {hasil_exact['tco']:,.2f}")
 
+    #break even
+    break_even = calculate_break_even(
+    hasil_greedy,
+    hasil_exact,
+    fuel_price
+    )
+
+    print("\n=== ANALISIS BISNIS ===")
+
+    if break_even is not None:
+
+        print(
+            f"Titik Break-Even : Rp {break_even:,.2f}/liter"
+        )
+
+        if fuel_price < break_even:
+
+            print(
+                "Rekomendasi: Gunakan Algoritma Greedy karena harga bensin saat ini masih berada di bawah titik Break-Even."
+            )
+
+        else:
+
+            print(
+                "Rekomendasi: Gunakan Algoritma Exact karena harga bensin sudah melampaui titik Break-Even."
+            )
+
+    else:
+
+        print(
+            "Titik Break-Even tidak ditemukan."
+        )
+
+        print(
+            "Rekomendasi: Gunakan Algoritma Greedy"
+        )
 
 if __name__ == "__main__":
     main()
