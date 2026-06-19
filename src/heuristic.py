@@ -66,6 +66,11 @@ def solve_greedy(distance_matrix, locations, weights, fuel_price):
 
     # Kembali ke Hub dari lokasi terakhir pengantaran
     route.append(0)
+
+    # Menghitung total jarak
+    total_distance = 0
+    for i in range(len(route) - 1):
+        total_distance += distance_matrix[route[i]][route[i+1]]
     
     # Hitung pengeluaran operasional (Biaya BBM + Biaya Komputasi Server)
     fuel_cost = calculate_fuel_cost(route, distance_matrix, locations, weights, fuel_price)
@@ -80,6 +85,7 @@ def solve_greedy(distance_matrix, locations, weights, fuel_price):
     
     return {
         "route": route,
+        "total_distance": total_distance,
         "execution_time_ms": execution_time_ms,
         "fuel_cost": fuel_cost,
         "server_cost": server_cost,
@@ -94,6 +100,7 @@ def print_cli_output(result, locations):
     print("=" * 70)
     print(f"Urutan Rute Pelayanan : \n{' -> '.join(route_names)}")
     print("-" * 70)
+    print(f"Total Jarak           : {result['total_distance']} km")
     print(f"Waktu Eksekusi Program: {result['execution_time_ms']:.6f} ms")
     print("-" * 70)
     print("RINCIAN TOTAL COST OF OWNERSHIP (TCO):")
